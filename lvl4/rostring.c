@@ -66,17 +66,18 @@ int		main(int ac, char **av)
 {
 	int i;
 
-	if (ac > 1)
+	i = 0;
+	if (ac < 2)
+		write(1, "\n", 1);
+	else
 	{
 		i = 1;
 		while (i < ac)
 		{
 			rostring(av[i]);
-			ft_putchar('\n');
 			i++;
 		}
+		write(1, "\n", 1);
 	}
-	else
-		ft_putchar('\n');
 	return (0);
 }
